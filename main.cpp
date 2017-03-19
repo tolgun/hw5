@@ -127,7 +127,7 @@ int Game() {
     Deck deck;
     deck.Shuffle();
     deck.DealAll();
-    int pile = deck.getCard(index[12][0]).getRankNum();
+    int pile = deck.getCard(index[12][3]).getRankNum();
     int indX = 12;
     int indY = 0;
     int h;
@@ -153,7 +153,7 @@ int main() {
     int x;
     int win = 0;
     int lose = 0;
-    for (int i = 0; i < 100; ++i) {
+    for (int i = 0; i < 1000; ++i) {
         x = Game();
         if(x == 1) {
             win++;
@@ -161,7 +161,7 @@ int main() {
             lose++;
         }
     }
-    cout << "The win/lose ratio is " << win << "/" << lose << " ";
+    cout << "The ratio is " << win << "/1000 ";
 
     return 0;
 }
